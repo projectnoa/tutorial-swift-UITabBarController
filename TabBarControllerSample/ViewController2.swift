@@ -1,9 +1,9 @@
 //
-//  item2.swift
-//  UITabBarControllerExample
+//  ViewController2.swift
+//  TabBarControllerSample
 //
-//  Created by Juan Reyes on 11/19/22.
-//
+//  Created by Juan Mueller on 11/19/22.
+//  www.ajourneyforwisdom.com
 
 import Foundation
 import UIKit
