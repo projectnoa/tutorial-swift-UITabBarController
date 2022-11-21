@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		208D0B86292AF7DF00139DD7 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D0B85292AF7DF00139DD7 /* ViewController2.swift */; };
+		208D0B88292AF7EB00139DD7 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D0B87292AF7EB00139DD7 /* ViewController3.swift */; };
 		20F3F1BA29295931001C22F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3F1B929295931001C22F4 /* AppDelegate.swift */; };
 		20F3F1BC29295931001C22F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3F1BB29295931001C22F4 /* SceneDelegate.swift */; };
 		20F3F1BE29295931001C22F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3F1BD29295931001C22F4 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		208D0B85292AF7DF00139DD7 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		208D0B87292AF7EB00139DD7 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		20F3F1B629295931001C22F4 /* TabBarControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F3F1B929295931001C22F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20F3F1BB29295931001C22F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +60,15 @@
 		20F3F1B829295931001C22F4 /* TabBarControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				20F3F1C729295932001C22F4 /* Info.plist */,
 				20F3F1B929295931001C22F4 /* AppDelegate.swift */,
 				20F3F1BB29295931001C22F4 /* SceneDelegate.swift */,
 				20F3F1BD29295931001C22F4 /* ViewController.swift */,
-				20F3F1BF29295931001C22F4 /* Main.storyboard */,
+				208D0B85292AF7DF00139DD7 /* ViewController2.swift */,
+				208D0B87292AF7EB00139DD7 /* ViewController3.swift */,
 				20F3F1C229295932001C22F4 /* Assets.xcassets */,
 				20F3F1C429295932001C22F4 /* LaunchScreen.storyboard */,
-				20F3F1C729295932001C22F4 /* Info.plist */,
+				20F3F1BF29295931001C22F4 /* Main.storyboard */,
 			);
 			path = TabBarControllerSample;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208D0B88292AF7EB00139DD7 /* ViewController3.swift in Sources */,
 				20F3F1BE29295931001C22F4 /* ViewController.swift in Sources */,
+				208D0B86292AF7DF00139DD7 /* ViewController2.swift in Sources */,
 				20F3F1BA29295931001C22F4 /* AppDelegate.swift in Sources */,
 				20F3F1BC29295931001C22F4 /* SceneDelegate.swift in Sources */,
 			);

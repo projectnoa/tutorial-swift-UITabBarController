@@ -1,24 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LjM-zh-egW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Weather-->
+        <scene sceneID="a97-Vx-HAr">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="qds-v4-HVJ" customClass="ViewController2" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4s4-HB-hJy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qnp-Au-vSj">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qds-v4-HVJ" id="U34-Qe-1Sy"/>
+                                    <outlet property="delegate" destination="qds-v4-HVJ" id="VIl-to-th6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uA1-B5-VJ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qnp-Au-vSj" firstAttribute="bottom" secondItem="uA1-B5-VJ4" secondAttribute="bottom" id="LCS-be-54C"/>
+                            <constraint firstItem="qnp-Au-vSj" firstAttribute="leading" secondItem="uA1-B5-VJ4" secondAttribute="leading" id="Ukh-a4-DQ5"/>
+                            <constraint firstItem="qnp-Au-vSj" firstAttribute="top" secondItem="uA1-B5-VJ4" secondAttribute="top" id="vg3-b5-6h4"/>
+                            <constraint firstItem="qnp-Au-vSj" firstAttribute="trailing" secondItem="uA1-B5-VJ4" secondAttribute="trailing" id="yfS-of-D6X"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud" catalog="system" id="VOw-XO-K8t"/>
+                    <connections>
+                        <outlet property="tableView" destination="qnp-Au-vSj" id="rEi-Pc-j9q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Lp-FQ-UGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339.69465648854958" y="164.78873239436621"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="8a8-zN-bdW">
+            <objects>
+                <viewController id="Arb-LB-uB7" customClass="ViewController3" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jbf-vp-Bqh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6Y-L4-aCT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Arb-LB-uB7" id="Vq8-AJ-rre"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q7i-wi-Hne"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X6Y-L4-aCT" firstAttribute="top" secondItem="Q7i-wi-Hne" secondAttribute="top" id="Fki-Na-d3L"/>
+                            <constraint firstItem="Q7i-wi-Hne" firstAttribute="bottom" secondItem="X6Y-L4-aCT" secondAttribute="bottom" id="V76-dJ-hgi"/>
+                            <constraint firstItem="Q7i-wi-Hne" firstAttribute="trailing" secondItem="X6Y-L4-aCT" secondAttribute="trailing" id="dj5-8Y-NYL"/>
+                            <constraint firstItem="X6Y-L4-aCT" firstAttribute="leading" secondItem="Q7i-wi-Hne" secondAttribute="leading" id="fJH-5V-AhM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="OtW-ns-WTp"/>
+                    <connections>
+                        <outlet property="mapView" destination="X6Y-L4-aCT" id="32k-LW-Mje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHE-UA-EJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="830"/>
+        </scene>
+        <!--Clock-->
+        <scene sceneID="UZy-oq-F2f">
+            <objects>
+                <viewController id="B31-iC-6vw" customClass="ViewController" customModule="TabBarControllerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JzI-br-t8z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-bA-QJd">
+                                <rect key="frame" x="116.66666666666669" y="390" width="160" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YdR-lD-8uL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f6i-bA-QJd" firstAttribute="centerY" secondItem="JzI-br-t8z" secondAttribute="centerY" id="6kj-Rg-FUy"/>
+                            <constraint firstItem="f6i-bA-QJd" firstAttribute="centerX" secondItem="JzI-br-t8z" secondAttribute="centerX" id="vWR-cq-Wd8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Clock" image="clock" catalog="system" id="YUU-L4-7Qe"/>
+                    <connections>
+                        <outlet property="clockLabel" destination="f6i-bA-QJd" id="m8O-Cy-QpJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HC8-YB-KVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="-503"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8uj-Gw-lc8">
+            <objects>
+                <tabBarController id="LjM-zh-egW" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ll-1N-TiE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="B31-iC-6vw" kind="relationship" relationship="viewControllers" id="mfm-ie-zI2"/>
+                        <segue destination="qds-v4-HVJ" kind="relationship" relationship="viewControllers" id="f36-mb-ATK"/>
+                        <segue destination="Arb-LB-uB7" kind="relationship" relationship="viewControllers" id="cul-L5-jBm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQX-3V-CEN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565" y="-199"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="cloud" catalog="system" width="128" height="87"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var clockLabel: UILabel!
+    let dateFormatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .medium
+        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats:true);
     }
-
-
+    
+    @objc func updateLabel() -> Void {
+        clockLabel.text = dateFormatter.string(from: Date());
+    }
 }
 
